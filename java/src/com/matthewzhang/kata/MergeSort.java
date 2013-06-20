@@ -10,6 +10,7 @@ import java.util.Arrays;
  */
 public class MergeSort {
     public static int[] mergeSort(int[] data) {
+        if(data == null) return null;
         if (data.length == 1) {
             return data;
         }

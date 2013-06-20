@@ -13,6 +13,15 @@ import java.util.List;
  */
 public class NumberPadWordGeneratorTest {
     @Test
+    public void testGetWordsOfEmptyAndNull(){
+        List<String> words = NumberPadWordGenerator.getWords(null);
+        Assert.assertEquals(words.size(), 0);
+        int[] digits = {};
+        words = NumberPadWordGenerator.getWords(digits);
+        Assert.assertEquals(words.size(), 0);
+    }
+
+    @Test
     public void testGetWordsOf1() {
         int[] digits = {1};
         List<String> words = NumberPadWordGenerator.getWords(digits);
